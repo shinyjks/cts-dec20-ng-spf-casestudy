@@ -1,0 +1,83 @@
+<div>
+    <h3 *ngIf = "message" class = "alert alert-success">{{message}}</h3>
+    <form #customerForm="ngForm" (ngSubmit) = "register(customerForm.value)"></form>
+    <div class = "row">
+        <div class = "col-2">
+             First Name
+        </div>
+        <div class = "col-4">
+            <input type = "text" name = "FirstName" [(ngModel)] = "FirstName" class = "form-control" >
+            
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2">
+             Last Name
+        </div>
+        <div class = "col-4">
+            <input type = "text" name = "LastName" [(ngModel)] = "LastName" class = "form-control" >
+            
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2">
+             Date of Birth
+        </div>
+        <div class = "col-4">
+            <input type = "date" name = "Dob" [(ngModel)] = "Dob" class = "form-control">
+            
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2">
+            Address
+        </div>
+        <div class = "col-4">
+            <input type = "text" name = "Address" [(ngModel)] = "Address" class = "form-control" >
+            
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2">
+            Contact Number
+        </div>
+        <div class = "col-4">
+            <input type = "text" name = "ContactNumber" [(ngModel)] = "ContactNumber" class = "form-control" >
+            
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2">
+            Email Address
+        </div>
+        <div class = "col-4">
+            <input type = "email" name = "Email" [(ngModel)] = "Email" class = "form-control" >
+            
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2">
+            Password
+        </div>
+        <div class = "col-4">
+            <input type = "password" name = "Password" [(ngModel)] = "Password" class = "form-control" >
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2">
+            Confirm Password
+        </div>
+        <div class = "col-4">
+            <input type = "password" name = "Cnf_Password" [(ngModel)] = "Cnf_Password" class = "form-control" >
+            
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-2">
+            <input type = "reset" value="Reset" class="btn btn-primary">
+        </div>
+        <div class = "col-4">
+            <input type = "submit" value="Submit" class="btn btn-primary">
+        </div>
+    </div>
+</div>

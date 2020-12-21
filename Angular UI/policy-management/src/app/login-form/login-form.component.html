@@ -1,0 +1,16 @@
+<div>
+    <h3>Login Form</h3>
+    <hr />
+    <form #loginForm = "ngForm" (ngSubmit) = "handleLogin(loginForm.value)">
+        <div>
+            <input type = "text" name = "FirstName" [(ngModel)] = "FirstName" placeholder="Enter First name">
+        </div>
+        <div>
+            <input type = "password" name = "Password" [(ngModel)] = "Password" 
+                placeholder="Enter password">
+        </div>
+        <div>
+            <input type = "submit" value = "Login" class = "btn btn-primary">
+        </div>
+    </form>
+</div>

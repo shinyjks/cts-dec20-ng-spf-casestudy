@@ -1,0 +1,34 @@
+<div>
+    <h3>Welcome {{FirstName}}</h3><hr />
+    <button class = "btn btn-primary" (click) = "refresh()">Available Policies</button>
+    <table *ngIf = "AvailablePolicy" class = "table">
+        <thead>
+            <tr>
+                <th>SNO</th><th>Policy Name</th><th>Policy Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let p of AvailablePolicy">
+                <td>{{p.sno}}</td><td>{{p.PolicyName}}</td><td>{{p.PolicyDetails}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>{{FirstName}} Policy Details</h2>
+    <button class = "btn btn-primary" (click) = "handleClick()">User Policies</button>
+    <table *ngIf = "userpolicies" class = "table">
+        <thead>
+            <tr>
+                <th>Policy No</th><th>Policy Name</th><th>Amount</th><th>Policy End Date</th><th>Valid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let u of userpolicies">
+                <td>{{u.sno}}</td><td>{{u.PolicyName}}</td><td>{{u.Amount}}</td><td>{{u.PolicyEndDate}}</td><td>{{u.Valid}}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+<div>
+    <button class = "btn btn-primary" (click) = "handleLog()">Logout</button>
+</div>
